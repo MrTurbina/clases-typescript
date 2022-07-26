@@ -1,0 +1,55 @@
+<!-- <p>titulos works!</p>
+<h1>Este es un h1</h1>
+<h2>Este es un h2</h2>
+<h3>Este es un h3</h3> -->
+
+<!-- interpolacion para mostrar informacion en el html -->
+<!-- {{nombre}}
+<h3></h3>
+{{apellido}}
+<h3>    </h3>
+{{nombre + ' ' + apellido}}
+<h3>{{alumno.nombre}} {{alumno.apellido}} {{ alumno.edad}}</h3> -->
+
+<!-- property binding para asignar un valor de una variable a una propiedad -->
+<!-- <input type="text" [value] = "inputNuevo"> -->
+
+<!-- <img [src]="imagen" alt=""> -->
+
+<!-- two-way binding, mostrar y asignar un valor -->
+<!-- <input type="text" [(ngModel)]="otroInput">
+<p> {{otroInput}} </p> -->
+<!-- 
+<label for="">Correo
+    <input type = "text" [(ngModel)]="correo" >
+</label>
+<label for="">Contraseña
+    <input type = "password" [(ngModel)]="password" >
+</label> -->
+<!-- <button (click)="ingresar()">iniciar</button> -->
+
+<!-- eventos por html -->
+<button (dblclick)="ingresar($event)">iniciar</button>
+<button (dblclick)="llamarAlert()">doble click</button>
+
+<!-- evento ngModelChange // propio de angular -->
+
+<label for="">Correo
+    <input type = "text" (ngModelChange)="escribirCorreo()" [(ngModel)]="correo" >
+</label>
+<label for="">Contraseña      <!-- evento key down y key up -->
+    <input type = "password" (keyup)="ingresar($event)" [(ngModel)]="password" >
+</label>
+
+<!-- evento input -->
+<br>
+<br>
+<!-- <input type="text" (input)="escribir($event)" > -->
+
+<!-- evento focus -->
+<!-- <input type=" text" (focus)="colorearFondo($event)" > -->
+
+<!-- <img src="https://c.tenor.com/gYSfdzDH9asAAAAC/google-dots.gif" 
+(mouseenter)="cambiarTamano($event)" 
+(mouseleave)="agrandarTamano($event)" alt="">
+ -->

@@ -1,0 +1,46 @@
+<!-- <div *ngIf="!cargando">
+    <p>ha terminado de cargar</p>
+</div>
+
+<img *ngIf="cargando" src="https://i.stack.imgur.com/kOnzy.gif" alt="">
+
+<button (click)="mostrarCargando()">Mostrar Cargando</button> -->
+
+<!-- <div *ngFor="let nombre of nombres">
+    <p>hola mi nombre es: {{nombre}} </p>
+</div> -->
+
+
+<!-- <div *ngFor="let producto of productos" class="producto">
+    <p>El producto es: {{producto.nombre}}</p>
+    <p>Su stock es: {{producto.stock}}</p>
+    <p>El fabricanete es: {{producto.fabricante}}</p>
+    <p>Su Vencimiento es: {{producto.fechaVencimiento}}</p>
+</div> -->
+
+<!-- <div class="tab"[ngSwitch]="pestana">
+    <button (click)="cambiarPestana('perfil')">perfil</button>
+    <button (click)="cambiarPestana('puntos')">puntos</button>
+    <button (click)="cambiarPestana('info')">info</button>
+
+    <div class="tabContenido">
+        <p *ngSwitchCase="'perfil'">este es el perfil</p>
+        <p *ngSwitchCase="'puntos'">estos son los puntos</p>
+        <p *ngSwitchCase="'info'">esta es la info info</p>
+        <p *ngSwitchDefault>seleccione una pestaña</p>
+    </div> 
+</div> -->
+
+<button (click)="alternarFondo()">alternar</button>
+
+<div [ngClass]="{'cuadrado': mostrarCuadrado}">
+    <p>Este deberia ser de color verde</p>
+
+</div>
+<div *ngFor="let producto of productos" class="producto">
+    <p [ngClass]="{'textoImportante': producto.esImportante,  
+    'textoGrande': producto.esGrande}">El producto es: {{producto.nombre}}</p>
+    <p>Su stock es: {{producto.stock}}</p>
+    <p>El fabricanete es: {{producto.fabricante}}</p>
+    <p [class.textoImportante] ="producto.esImportante">Su Vencimiento es: {{producto.fechaVencimiento}}</p>
+</div>
